@@ -1,9 +1,29 @@
 @font-face {
     font-family: 'RobotoFlex';
     src: url(../assets/fonts/RobotoFlex.ttf);
+    format: ('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 :root {
-    --font-family: 'RobotoFlex', sans-serif;
-    
+    --font-family: 'RobotoFlex', sans-serif; 
+
+
+    --shouting: 'wght' 1000, 'slnt' 0;
+    --normal-tone: 'wght' 400, 'slnt' 0;
+    --whispering: 'wght' 100, 'slnt' -10;
+ 
+
+    --high-voice: 'wdth' 25, 'YTUC' 760, 'YTAS' 854, 'YTDE' -305;
+    --medium-voice: 'wdth' 63, 'YTUC' 116, 'YTAS' 108, 'YTDE' -104;
+    --low-voice:  'wdth' 151, 'YTUC' 528, 'YTAS' 649, 'YTDE' -98;
+
 }
+
+body {
+    font-family: var(--font-family);
+    font-variation-settings: var(--normal-tone), var(--medium-voice);
+}
+
+/* Make variables for every tone */
