@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'RobotoFlex';
+    src: url(../assets/fonts/RobotoFlex.ttf);
+}
+
+:root {
+    --font-family: 'RobotoFlex', sans-serif;
+    
+}
