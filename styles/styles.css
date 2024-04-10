@@ -17,13 +17,93 @@
 
     --high-voice: 'wdth' 25, 'YTUC' 760, 'YTAS' 854, 'YTDE' -305;
     --medium-voice: 'wdth' 63, 'YTUC' 116, 'YTAS' 108, 'YTDE' -104;
-    --low-voice:  'wdth' 151, 'YTUC' 528, 'YTAS' 649, 'YTDE' -98;
+    --low-voice: 'wght' 600, 'wdth' 151, 'YTUC' 528, 'YTAS' 649, 'YTDE' -98;
 
 }
 
-body {
+p {
     font-family: var(--font-family);
     font-variation-settings: var(--normal-tone), var(--medium-voice);
+    font-size: 1.5rem;
 }
 
-/* Make variables for every tone */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* max-height: 100vh; */
+    padding: 2rem;
+
+}
+
+video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+/* #cc{
+    max-height: 5vh;
+    overflow-y: scroll;
+} */
+
+
+/* chef Slowik */
+#caption-1, 
+#caption-5,
+#caption-8,
+#caption-10, 
+#caption-12, 
+#caption-13, 
+#caption-14, 
+#caption-15, 
+#caption-16,  
+#caption-18,
+#caption-19,
+#caption-20,
+#caption-21,
+#caption-22,
+#caption-23,
+#caption-24,
+#caption-26,
+#caption-27,
+#caption-28,
+#caption-29,
+#caption-30,
+#caption-31,
+#caption-32,
+#caption-36,
+#caption-37,
+#caption-38,
+#caption-39,
+#caption-40
+{
+    font-variation-settings: var(--normal-tone), var(--low-voice);
+}
+
+
+/* man */
+#caption-6, #caption-9{
+    font-variation-settings: var(--normal-tone), var(--low-voice);
+}
+
+/* man whisper */
+#caption-17{
+    font-variation-settings: var(--low-voice), var(--whispering);
+}
+
+/* man in background */
+#caption{
+    font-variation-settings: var(--medium-voice), var(--whispering);
+}
+
+/* woman */
+/* #{
+    font-variation-settings: var(--normal-tone), var(--high-voice);
+} */
+
+/* woman whispering */
+#caption-35{
+    font-variation-settings: var(--whispering), var(--high-voice);
+}
