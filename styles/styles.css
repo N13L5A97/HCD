@@ -2,29 +2,22 @@
     font-family: 'RobotoFlex';
     src: url(../assets/fonts/RobotoFlex.ttf);
     format: ('truetype');
-    font-weight: 400;
-    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url(../assets/fonts/Inconsolata.ttf);
+    format: ('truetype');
 }
 
 :root {
-    --font-family: 'RobotoFlex', sans-serif; 
+    /* Inconsolata */
+    --font-family: 'Inconsolata', monospace;
+    /* weight from 275 to 900 */
+    --volume: 300;
+    /* width from 50 to 200 */
+    --pitch: 100;
 
-
-    --shouting: 'wght' 1000, 'slnt' 0;
-    --normal-tone: 'wght' 400, 'slnt' 0;
-    --whispering: 'wght' 100, 'slnt' -10;
- 
-
-    --high-voice: 'wdth' 25, 'YTUC' 760, 'YTAS' 854, 'YTDE' -305;
-    --medium-voice: 'wdth' 63, 'YTUC' 116, 'YTAS' 108, 'YTDE' -104;
-    --low-voice: 'wght' 600, 'wdth' 151, 'YTUC' 528, 'YTAS' 649, 'YTDE' -98;
-
-}
-
-p {
-    font-family: var(--font-family);
-    font-variation-settings: var(--normal-tone), var(--medium-voice);
-    font-size: 1.5rem;
 }
 
 main{
@@ -43,67 +36,71 @@ video {
     margin-bottom: 2rem;
 }
 
-/* #cc{
-    max-height: 5vh;
-    overflow-y: scroll;
-} */
+#cc{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
 
+p {
+    font-family: var(--font-family);
+    font-variation-settings: 'wght' var(--volume), 'wdth' var(--pitch);
+    font-size: 1rem;
+    margin: .1rem;
+}
 
-/* chef Slowik */
-#caption-1, 
-#caption-5,
-#caption-8,
-#caption-10, 
-#caption-12, 
-#caption-13, 
-#caption-14, 
-#caption-15, 
-#caption-16,  
-#caption-18,
-#caption-19,
-#caption-20,
-#caption-21,
-#caption-22,
-#caption-23,
-#caption-24,
-#caption-26,
-#caption-27,
-#caption-28,
-#caption-29,
-#caption-30,
-#caption-31,
-#caption-32,
-#caption-36,
-#caption-37,
-#caption-38,
-#caption-39,
-#caption-40
-{
-    font-variation-settings: var(--normal-tone), var(--low-voice);
+/* sounds */
+.loud-sound, .normal-sound, .soft-sound, .music{
+    position: absolute;
+    top: -6rem;
+    background-color: white;
+    padding: .2rem;
+}
+
+.loud-sound{
+    font-family: var(--font-family);
+    font-style: italic;
+    --volume: 900;
+}
+
+.normal-sound{
+    font-family: var(--font-family);
+    font-style: italic;
+    --volume: 500;
+}
+
+.soft-sound{
+    font-family: var(--font-family);
+    font-style: italic;
+    --volume: 300;
+}
+
+/* music */
+.music{
+    font-family: var(--font-family);
+    font-style: italic;
 }
 
 
-/* man */
-#caption-6, #caption-9{
-    font-variation-settings: var(--normal-tone), var(--low-voice);
+/* people */
+.slowik{
+    font-family: var(--font-family);
+    --pitch: 200;
+    --volume: 500;
 }
 
-/* man whisper */
-#caption-17{
-    font-variation-settings: var(--low-voice), var(--whispering);
+.man{
+    font-family: var(--font-family);
+    --pitch: 400;
+    --volume: 300;
 }
 
-/* man in background */
-#caption{
-    font-variation-settings: var(--medium-voice), var(--whispering);
-}
-
-/* woman */
-/* #{
-    font-variation-settings: var(--normal-tone), var(--high-voice);
-} */
-
-/* woman whispering */
-#caption-35{
-    font-variation-settings: var(--whispering), var(--high-voice);
+.lillian{
+    font-family: var(--font-family);
+    --pitch: 100;
+    --volume: 300;
+    color: blueviolet;
 }
