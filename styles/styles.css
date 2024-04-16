@@ -1,106 +1,194 @@
 @font-face {
-    font-family: 'RobotoFlex';
-    src: url(../assets/fonts/RobotoFlex.ttf);
-    format: ('truetype');
+	font-family: "RobotoFlex";
+	src: url(../assets/fonts/RobotoFlex.ttf);
+	format: ("truetype");
 }
 
 @font-face {
-    font-family: 'Inconsolata';
-    src: url(../assets/fonts/Inconsolata.ttf);
-    format: ('truetype');
+	font-family: "Inconsolata";
+	src: url(../assets/fonts/Inconsolata.ttf);
+	format: ("truetype");
+}
+
+@font-face {
+	font-family: "BodoniModa";
+	src: url(../assets/fonts/BodoniModa.ttf);
+	format: ("truetype");
+}
+
+@font-face {
+	font-family: "JosefinSlab";
+	src: url(../assets/fonts/JosefinSlab.ttf);
+	format: ("truetype");
 }
 
 :root {
-    /* Inconsolata */
-    --font-family: 'Inconsolata', monospace;
-    /* weight from 275 to 900 */
-    --volume: 300;
-    /* width from 50 to 200 */
-    --pitch: 100;
-
+	/* Inconsolata */
+	--font-family: "RobotoFlex", monospace;
+	/* weight from 275 to 900 */
+	--volume: 300;
+	/* width from 50 to 200 */
+	--pitch: 100;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* max-height: 100vh; */
-    padding: 2rem;
-
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* max-height: 100vh; */
+	padding: 2rem;
 }
 
 video {
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
+	width: 100%;
+	height: auto;
+	margin-bottom: 2rem;
 }
 
-#cc{
-    height: 5rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+#cc {
+	height: 5rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
 }
 
 p {
-    font-family: var(--font-family);
-    font-variation-settings: 'wght' var(--volume), 'wdth' var(--pitch);
-    font-size: 1rem;
-    margin: .1rem;
+	font-family: var(--font-family);
+	font-variation-settings: "wght" var(--volume), "wdth" var(--pitch);
+	font-size: 0.8rem;
+	margin: 0.1rem;
 }
 
 /* sounds */
-.loud-sound, .normal-sound, .soft-sound, .music{
-    position: absolute;
-    top: -6rem;
-    background-color: white;
-    padding: .2rem;
+.loud-sound,
+.normal-sound,
+.soft-sound,
+.music {
+	position: absolute;
+	top: -6rem;
+	background-color: white;
+	padding: 0.2rem;
 }
 
-.loud-sound{
-    font-family: var(--font-family);
-    font-style: italic;
-    --volume: 900;
+.loud-sound {
+	font-family: var(--font-family);
+	font-style: italic;
+	--volume: 900;
 }
 
-.normal-sound{
-    font-family: var(--font-family);
-    font-style: italic;
-    --volume: 500;
+.normal-sound {
+	font-family: var(--font-family);
+	font-style: italic;
+	--volume: 500;
 }
 
-.soft-sound{
-    font-family: var(--font-family);
-    font-style: italic;
-    --volume: 300;
+.soft-sound {
+	font-family: var(--font-family);
+	font-style: italic;
+	--volume: 300;
 }
 
 /* music */
-.music{
-    font-family: var(--font-family);
-    font-style: italic;
+.music {
+	font-family: var(--font-family);
+	font-style: italic;
 }
-
 
 /* people */
-.slowik{
-    font-family: var(--font-family);
-    --pitch: 200;
-    --volume: 500;
+.slowik {
+	font-family: "BodoniModa";
+	font-size: 1.2rem;
+	--pitch: 200;
+	--volume: 500;
+	color: rgb(197, 52, 0);
 }
 
-.man{
-    font-family: var(--font-family);
-    --pitch: 400;
-    --volume: 300;
+.man {
+	font-family: var(--font-family);
+	--pitch: 400;
+	--volume: 400;
 }
 
-.lillian{
-    font-family: var(--font-family);
-    --pitch: 100;
-    --volume: 300;
-    color: blueviolet;
+.richard {
+	font-family: Inconsolata;
+	--pitch: 400;
+	--volume: 300;
+    color: rgb(107, 160, 172);
+}
+
+.lillian {
+	font-family: "JosefinSlab";
+	--volume: 500;
+	color: rgb(6, 106, 63);
+	font-size: 1.3rem;
+}
+
+.lillian-soft {
+	font-family: "JosefinSlab";
+	--volume: 300;
+	color: rgb(6, 106, 63);
+	font-size: 1.1rem;
+}
+
+/* specific styling */
+
+#caption-7,
+#caption-8,
+#caption-52 {
+	top: -8rem;
+}
+
+@keyframes hardToSoft {
+	0% {
+		font-variation-settings: "wght" 900;
+	}
+	100% {
+		font-variation-settings: "wght" 300;
+	}
+}
+
+.hardToSoft {
+	animation: hardToSoft ease-out forwards;
+}
+
+@keyframes dingFadeOut {
+	0% {
+		font-variation-settings: "wght" 500;
+	}
+	100% {
+		font-variation-settings: "wght" 300;
+	}
+}
+
+.dingFadeOut {
+	animation: dingFadeOut ease-out forwards;
+}
+
+@keyframes softToHard {
+	0% {
+		font-variation-settings: "wght" 300;
+	}
+	100% {
+		font-variation-settings: "wght" 900;
+	}
+}
+
+.softToHard {
+	animation: softToHard ease-out forwards;
+}
+
+.tweezerClick {
+	animation: tweezerClick ease-out infinite alternate;
+}
+
+@keyframes tweezerClick {
+	0% {
+		font-variation-settings: "wght" 300;
+	}
+    10% {
+        font-variation-settings: "wght" 400;
+    }
 }

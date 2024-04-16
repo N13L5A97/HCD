@@ -1,17 +1,17 @@
-let captions = document.getElementById("cc");
-let video = document.getElementById("video");
+const captions = document.getElementById("cc");
+const video = document.getElementById("video");
 
-let insertCaption = async () => {
+const insertCaption = async () => {
     video.addEventListener("timeupdate", () => {
         console.log(video.currentTime);
     });
 
     video.addEventListener("timeupdate", () => {
-        // Bell Dings
+        // sea gulls screeching softly in the background while water splashes gently
         let start = 0;
         let end = 2;
         let id = "caption-1";
-        let caption = "(SEAGULLS SCREECHING SOFTLY IN THE BACKGROUND WHILE WATER SPLASHES GENTLY)";
+        let caption = "*SEAGULLS SCREECHING SOFTLY IN THE BACKGROUND WHILE WATER SPLASHES GENTLY*";
         let styling = "soft-sound";
         
         handleCaption(start, end, id, caption, styling);
@@ -19,14 +19,16 @@ let insertCaption = async () => {
 
 
     video.addEventListener("timeupdate", () => {
-        // Bell Dings
+        // loud echoing bell dings once and fades out slowly
         let start = 2.5;
-        let end = 17;
+        let end = 20;
         let id = "caption-2";
-        let caption = "(LOUD ECHOING BELL DINGS ONCE AND FADES OUT SLOWLY)";
+        let caption = "*LOUD ECHOING BELL DINGS ONCE AND FADES OUT SLOWLY*";
         let styling = "normal-sound";
+        let animation = "hardToSoft"
+        let duration = 5;
         
-        handleCaption(start, end, id, caption, styling);
+        handleCaption(start, end, id, caption, styling, animation, duration);
     });
     
     video.addEventListener("timeupdate", () => {
@@ -56,19 +58,18 @@ let insertCaption = async () => {
         let start = 19;
         let end = 20;
         let id = "caption-5";
-        let caption = "(A KNIFE MAKES A SOFT CLINKING SOUND AGAINST SOMETHING METALLIC)";
+        let caption = "*A KNIFE MAKES A SOFT CLINKING SOUND AGAINST SOMETHING METALLIC*";
         let styling = "soft-sound";
         
         handleCaption(start, end, id, caption, styling);
     });
 
-    // deze nog uitgebreider omschrijven
     video.addEventListener("timeupdate", () => {
         // (CLASSICAL MUSIC PLAYING)
         let start = 20;
         let end = 36;
         let id = "caption-6";
-        let caption = "(🎶CLASSICAL VIOLINS PLAYING A IN THE BACKGROUND🎶)";  
+        let caption = "🎶CLASSICAL VIOLINS PLAYING A IN THE BACKGROUND🎶";  
         let styling = "music";
         
         handleCaption(start, end, id, caption, styling);
@@ -79,7 +80,7 @@ let insertCaption = async () => {
         let start = 20.5;
         let end = 21.5;
         let id = "caption-7";
-        let caption = "(SOFT SCRATCHING SOUND)";  
+        let caption = "*SOFT SCRATCHING SOUND*";  
         let styling = "soft-sound";
         
         handleCaption(start, end, id, caption, styling);
@@ -87,14 +88,16 @@ let insertCaption = async () => {
 
     //deze vertalen naar animatie
     video.addEventListener("timeupdate", () => {
-        // (Soft short clicking and ticking sounds of the tweezers "click click click")
+        // (Soft short clicking and ticking sounds of the tweezers)
         let start = 22;
         let end = 35;
         let id = "caption-8"
-        let caption = "(SOFT SHORT CLICKING AND TICKING SOUNDS OF THE TWEEZERS 'CLICK CLICK CLICK')";  
+        let caption = "*SOFT SHORT CLICKING AND TICKING SOUNDS OF THE TWEEZERS 'CLICK CLICK CLICK'*";  
         let styling = "soft-sound";
+        let animation = "tweezerClick"
+        let duration = 1;
         
-        handleCaption(start, end, id, caption, styling);
+        handleCaption(start, end, id, caption, styling, animation, duration);
     });
 
     video.addEventListener("timeupdate", () => {
@@ -102,10 +105,12 @@ let insertCaption = async () => {
         let start = 36;
         let end = 38;
         let id = "caption-9"
-        let caption = "(ECHOING BELL DINGS ONCE IN THE BACKGROUND AND FADES OUT SLOWLY)";  
+        let caption = "*ECHOING BELL DINGS ONCE IN THE BACKGROUND AND FADES OUT SLOWLY*";  
         let styling = "soft-sound";
+        let animation = "dingFadeOut"
+        let duration = 1;
         
-        handleCaption(start, end, id, caption, styling);
+        handleCaption(start, end, id, caption, styling, animation, duration);
     });
 
     video.addEventListener("timeupdate", () => {
@@ -113,10 +118,12 @@ let insertCaption = async () => {
         let start = 38;
         let end = 42;
         let id = "caption-10"
-        let caption = "(ECHOING BELL TURNS INTO DARK, DEEP, OMINOUS SOUND AND BECOMES LOUDER AND LOUDER)";  
+        let caption = "*ECHOING BELL TURNS INTO DARK, DEEP, OMINOUS SOUND AND BECOMES LOUDER AND LOUDER*";  
         let styling = "normal-sound";
+        let animation = "softToHard"
+        let duration = end - start;
         
-        handleCaption(start, end, id, caption, styling);
+        handleCaption(start, end, id, caption, styling, animation, duration);
     });
 
     video.addEventListener("timeupdate", () => {
@@ -124,7 +131,7 @@ let insertCaption = async () => {
         let start = 42.3;
         let end = 43;
         let id = "caption-11"
-        let caption = "(LOUD CLAP)";  
+        let caption = "*LOUD CLAP*";  
         let styling = "loud-sound";
         
         handleCaption(start, end, id, caption, styling);
@@ -135,7 +142,7 @@ let insertCaption = async () => {
         let start = 43;
         let end = 44;
         let id = "caption-12"
-        let caption = "(ONE HARD STOMPING SOUND OF THE CHEF'S SHOES)";  
+        let caption = "*ONE HARD STOMPING SOUND OF THE CHEF'S SHOES*";  
         let styling = "loud-sound";
         
         handleCaption(start, end, id, caption, styling);
@@ -146,7 +153,7 @@ let insertCaption = async () => {
         let start = 44;
         let end = 45;
         let id = "caption-13"
-        let caption = "(SILENCE)";  
+        let caption = "*SILENCE*";  
         let styling = "soft-sound";
         
         handleCaption(start, end, id, caption, styling);
@@ -169,7 +176,7 @@ let insertCaption = async () => {
         let end = 48;
         let id = "caption-15"
         let caption = "Richard: Good Evening";  
-        let styling = "man";
+        let styling = "richard";
         
         handleCaption(start, end, id, caption, styling);
     });
@@ -212,8 +219,8 @@ let insertCaption = async () => {
         let start = 49.5;
         let end = 52;
         let id = "caption-19"
-        let caption = "(SQUEAKING SOUND OF THE BOOTS OF THE CHEF'S ON THE FLOOR)";  
-        let styling = "norman-sound";
+        let caption = "*SQUEAKING SOUND OF THE BOOTS OF THE CHEF'S ON THE FLOOR*";  
+        let styling = "soft-sound";
         
         handleCaption(start, end, id, caption, styling);
     });
@@ -223,7 +230,7 @@ let insertCaption = async () => {
         let start = 50;
         let end = 52;
         let id = "caption-21"
-        let caption = "Welcome to Hawthorne";  
+        let caption = "Welcome to Hawthòrne";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -267,7 +274,7 @@ let insertCaption = async () => {
         let start = 58;
         let end = 59.5;
         let id = "caption-25"
-        let caption = "Slowik: over the next few hours";  
+        let caption = "Slowik: over the next fêw hours";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -278,7 +285,7 @@ let insertCaption = async () => {
         let start = 59.5;
         let end = 61;
         let id = "caption-26"
-        let caption = "you will ingest";  
+        let caption = "you will ingèst";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -289,7 +296,7 @@ let insertCaption = async () => {
         let start = 61;
         let end = 62;
         let id = "caption-27"
-        let caption = "fat";  
+        let caption = "fàt";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -300,7 +307,7 @@ let insertCaption = async () => {
         let start = 62.3;
         let end = 63.3;
         let id = "caption-28"
-        let caption = "salt";  
+        let caption = "sàlt";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -311,7 +318,7 @@ let insertCaption = async () => {
         let start = 63.5;
         let end = 64.5;
         let id = "caption-29"
-        let caption = "sugahr";  
+        let caption = "sugàr";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -322,7 +329,7 @@ let insertCaption = async () => {
         let start = 64.5;
         let end = 75;
         let id = "caption-30"
-        let caption = "(SOFT MYSTERIOUS SOUND RISES IN THE BACKGROUND)";  
+        let caption = "*SOFT MYSTERIOUS SOUND RISES IN THE BACKGROUND*";  
         let styling = "soft-sound";
         
         handleCaption(start, end, id, caption, styling);
@@ -344,7 +351,7 @@ let insertCaption = async () => {
         let start = 66.2;
         let end = 67.2;
         let id = "caption-32"
-        let caption = "bacteria";  
+        let caption = "bactèria";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -356,7 +363,7 @@ let insertCaption = async () => {
         let start = 68;
         let end = 69;
         let id = "caption-33"
-        let caption = "funghi";  
+        let caption = "funghaí";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -367,7 +374,7 @@ let insertCaption = async () => {
         let start = 69.5;
         let end = 71;
         let id = "caption-34"
-        let caption = "various plants and animals";  
+        let caption = "variousss plànts and ànimals";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -389,7 +396,7 @@ let insertCaption = async () => {
         let start = 72.5;
         let end = 74;
         let id = "caption-36"
-        let caption = "entire ecosystems";  
+        let caption = "entíre ecosystems";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -400,7 +407,7 @@ let insertCaption = async () => {
         let start = 75;
         let end = 110;
         let id = "caption-37"
-        let caption = "(MYSTERIOUS SOUND SLOWLY CHANGES INTO SLOW VIOLINS PLAYING)";  
+        let caption = "*MYSTERIOUS SOUND SLOWLY CHANGES INTO SLOW VIOLINS PLAYING*";  
         let styling = "music";
         
         handleCaption(start, end, id, caption, styling);
@@ -423,7 +430,7 @@ let insertCaption = async () => {
         let start = 77;
         let end = 78.5;
         let id = "caption-39"
-        let caption = "I have to beg of you one thing";  
+        let caption = "I have to bèg of you one thing";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -445,7 +452,7 @@ let insertCaption = async () => {
         let start = 80.5;
         let end = 81.5;
         let id = "caption-41"
-        let caption = "do not";  
+        let caption = "do nòt";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -456,7 +463,7 @@ let insertCaption = async () => {
         let start = 81.8;
         let end = 82.5;
         let id = "caption-42"
-        let caption = "eat.";  
+        let caption = "éat.";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -500,7 +507,7 @@ let insertCaption = async () => {
         let start = 89.5;
         let end = 90.5;
         let id = "caption-46"
-        let caption = "relish";  
+        let caption = "relissh";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -511,7 +518,7 @@ let insertCaption = async () => {
         let start = 91;
         let end = 94;
         let id = "caption-47"
-        let caption = "consider every morsel that you place inside your mouth";  
+        let caption = "consider every mòrsel that you place inside your mouth";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -522,7 +529,7 @@ let insertCaption = async () => {
         let start = 96;
         let end = 97.4;
         let id = "caption-48"
-        let caption = "Be mindful";  
+        let caption = "Be míndful";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -544,7 +551,7 @@ let insertCaption = async () => {
         let start = 99;
         let end = 100.5;
         let id = "caption-50"
-        let caption = "eat.";  
+        let caption = "éat.";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -567,7 +574,7 @@ let insertCaption = async () => {
         let end = 104;
         let id = "caption-52"
         let caption = "(SNIFS)";  
-        let styling = "slowik";
+        let styling = "soft-sound";
         
         handleCaption(start, end, id, caption, styling);
     });
@@ -577,7 +584,7 @@ let insertCaption = async () => {
         let start = 104.5;
         let end = 105.5;
         let id = "caption-53"
-        let caption = "And look around you";  
+        let caption = "Ànd look around you";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -588,7 +595,7 @@ let insertCaption = async () => {
         let start = 105.5;
         let end = 106.5;
         let id = "caption-54"
-        let caption = "Here we are";  
+        let caption = "Hére we àre";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -599,7 +606,7 @@ let insertCaption = async () => {
         let start = 107;
         let end = 108;
         let id = "caption-55"
-        let caption = "on this island";  
+        let caption = "on this ìsland";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -610,7 +617,7 @@ let insertCaption = async () => {
         let start = 109;
         let end = 110;
         let id = "caption-56"
-        let caption = "Slowik: Accept";  
+        let caption = "Slowik: Accèpt";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -621,7 +628,7 @@ let insertCaption = async () => {
         let start = 110;
         let end = 112;
         let id = "caption-57"
-        let caption = "(TYLER BREATHES IN)";  
+        let caption = "*TYLER BREATHES IN*";  
         let styling = "soft-sound";
         
         handleCaption(start, end, id, caption, styling);
@@ -632,7 +639,7 @@ let insertCaption = async () => {
         let start = 112;
         let end = 121.5;
         let id = "caption-58"
-        let caption = "(🎶MORE VIOLINS START PLAYING EUPHORIC AND DEEPER🎶)";  
+        let caption = "🎶MORE VIOLINS START PLAYING EUPHORIC AND DEEPER🎶";  
         let styling = "music";
         
         handleCaption(start, end, id, caption, styling);
@@ -643,7 +650,7 @@ let insertCaption = async () => {
         let start = 112;
         let end = 113;
         let id = "caption-59"
-        let caption = "Accept all of it";  
+        let caption = "Àccept all of it";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -654,7 +661,7 @@ let insertCaption = async () => {
         let start = 114;
         let end = 115;
         let id = "caption-60"
-        let caption = "And...";  
+        let caption = "Ànd...";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -666,7 +673,7 @@ let insertCaption = async () => {
         let start = 115.5;
         let end = 116.5;
         let id = "caption-61"
-        let caption = "forgive";  
+        let caption = "forgíve";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -677,7 +684,7 @@ let insertCaption = async () => {
         let start = 118;
         let end = 119.5;
         let id = "caption-62"
-        let caption = "Slowik: and on that note...";  
+        let caption = "Slowik: and on that nóte...";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -688,7 +695,7 @@ let insertCaption = async () => {
         let start = 120;
         let end = 121.5;
         let id = "caption-63"
-        let caption = "FOOOD!";  
+        let caption = "Fóóód!";  
         let styling = "slowik";
         
         handleCaption(start, end, id, caption, styling);
@@ -699,7 +706,7 @@ let insertCaption = async () => {
         let start = 121.5;
         let end = 123;
         let id = "caption-64"
-        let caption = "(CLINGING SOUNDS OF THE PLATES AND CUTLERY)";  
+        let caption = "*CLINGING SOUNDS OF THE PLATES AND CUTLERY*";  
         let styling = "normal-sound";
         
         handleCaption(start, end, id, caption, styling);
@@ -710,7 +717,7 @@ let insertCaption = async () => {
         let start = 122;
         let end = 124;
         let id = "caption-65"
-        let caption = "yeah, yeah, bring it, bring it!";  
+        let caption = "Man in the background: yeah, yeah, bring it, bring it!";  
         let styling = "man";
         
         handleCaption(start, end, id, caption, styling);
@@ -721,7 +728,7 @@ let insertCaption = async () => {
         let start = 124;
         let end = 126;
         let id = "caption-66"
-        let caption = "(MULTIPLE FOOD STEPS MARCH IN THE BACKGROUND)";  
+        let caption = "*MULTIPLE FOOD STEPS MARCH IN THE BACKGROUND*";  
         let styling = "normal-sound";
         
         handleCaption(start, end, id, caption, styling);
@@ -744,7 +751,7 @@ let insertCaption = async () => {
         let start = 128;
         let end = 133;
         let id = "caption-68"
-        let caption = "(🎶PIANO MUSIC STARTS PLAYING🎶)";  
+        let caption = "🎶PIANO MUSIC STARTS PLAYING🎶";  
         let styling = "music";
         
         handleCaption(start, end, id, caption, styling);
@@ -756,17 +763,114 @@ let insertCaption = async () => {
         let end = 130;
         let id = "caption-69"
         let caption = "Lillian: Oh wauw, it sounds just like a marching band";  
-        let styling = "lillian";
+        let styling = "lillian-soft";
         
         handleCaption(start, end, id, caption, styling);
     });
 
+    video.addEventListener("timeupdate", () => {
+        // high pitched flute making a uprising sound 
+        let start = 133;
+        let end = 136;
+        let id = "caption-70"
+        let caption = "🎶HIGH PITCHED FLUTE MAKING A UPRISING SOUND🎶";  
+        let styling = "music";
+        
+        handleCaption(start, end, id, caption, styling);
+    });
 
+    video.addEventListener("timeupdate", () => {
+        // Slowik: Our first course
+        let start = 134;
+        let end = 135.5;
+        let id = "caption-71"
+        let caption = "Slowik: Our first còurse is called";  
+        let styling = "slowik";
+        
+        handleCaption(start, end, id, caption, styling);
+    });
+
+    video.addEventListener("timeupdate", () => {
+        // Slowik: The Island
+        let start = 135.5;
+        let end = 136.5;
+        let id = "caption-72"
+        let caption = "The Ísland";  
+        let styling = "slowik";
+        
+        handleCaption(start, end, id, caption, styling);
+    });
+
+    video.addEventListener("timeupdate", () => {
+        // Slowik: On your plate are plants from around the island
+        let start = 137;
+        let end = 139;
+        let id = "caption-73"
+        let caption = "On your pláte are plànts from around the ísland";  
+        let styling = "slowik";
+        
+        handleCaption(start, end, id, caption, styling);
+    });
+
+    video.addEventListener("timeupdate", () => {
+        // Slowik: placed on rocks,
+        let start = 139;
+        let end = 140;
+        let id = "caption-74"
+        let caption = "placed on rócks,";  
+        let styling = "slowik";
+        
+        handleCaption(start, end, id, caption, styling);
+    });
+
+    video.addEventListener("timeupdate", () => {
+        // Slowik: from the shore,
+        let start = 140;
+        let end = 141;
+        let id = "caption-75"
+        let caption = "from the shòre,";  
+        let styling = "slowik";
+        
+        handleCaption(start, end, id, caption, styling);
+    });
+
+    video.addEventListener("timeupdate", () => {
+        // Slowik: covered in barely frozen,
+        let start = 141.5;
+        let end = 143;
+        let id = "caption-76"
+        let caption = "cóvered in bàrely frozen,";  
+        let styling = "slowik";
+        
+        handleCaption(start, end, id, caption, styling);
+    });
+
+    video.addEventListener("timeupdate", () => {
+        // Slowik: filtered seawater
+        let start = 143;
+        let end = 144;
+        let id = "caption-77"
+        let caption = "fíltered séawater";  
+        let styling = "slowik";
+        
+        handleCaption(start, end, id, caption, styling);
+    });
+
+    video.addEventListener("timeupdate", () => {
+        // Slowik: which will 
+        let start = 144;
+        let end = 145.1;
+        let id = "caption-78"
+        let caption = "whích will";  
+        let styling = "slowik";
+        
+        handleCaption(start, end, id, caption, styling);
+    });
 
 };
 
 // function that inserts the captions
-let handleCaption = (start, end, id, caption, styling) => {
+const handleCaption = (start, end, id, caption, styling, animation, duration) => {
     if (
         video.currentTime >= start &&
         video.currentTime <= end &&
@@ -779,6 +883,12 @@ let handleCaption = (start, end, id, caption, styling) => {
         captionElement.classList.add(styling);
         captionElement.id = id;
         captions.appendChild(captionElement);
+
+        if(animation){
+            captionElement.classList.add(animation);
+            captionElement.style.animationDuration = `${duration}s`;
+        }
+
     } else if (
         (video.currentTime < start || video.currentTime > end) &&
         document.getElementById(id)
