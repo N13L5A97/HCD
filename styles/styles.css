@@ -58,7 +58,7 @@ video {
 p {
 	font-family: var(--font-family);
 	font-variation-settings: "wght" var(--volume), "wdth" var(--pitch);
-	font-size: 0.8rem;
+	font-size: 1.5rem;
 	margin: 0.1rem;
 }
 
@@ -71,29 +71,24 @@ p {
 	top: -6rem;
 	background-color: white;
 	padding: 0.2rem;
+    font-size: .8rem;
+    font-style: italic;
 }
 
 .loud-sound {
-	font-family: var(--font-family);
-	font-style: italic;
 	--volume: 900;
 }
 
 .normal-sound {
-	font-family: var(--font-family);
-	font-style: italic;
 	--volume: 500;
 }
 
 .soft-sound {
-	font-family: var(--font-family);
-	font-style: italic;
 	--volume: 300;
 }
 
 /* music */
 .music {
-	font-family: var(--font-family);
 	font-style: italic;
 }
 
