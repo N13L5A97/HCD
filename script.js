@@ -92,12 +92,10 @@ const insertCaption = async () => {
         let start = 22;
         let end = 35;
         let id = "caption-8"
-        let caption = "*SOFT SHORT CLICKING AND TICKING SOUNDS OF THE TWEEZERS 'CLICK CLICK CLICK'*";  
+        let caption = "*SOFT SHORT CLICKING AND TICKING SOUNDS OF THE TWEEZERS*";  
         let styling = "soft-sound";
-        let animation = "tweezerClick"
-        let duration = 1;
         
-        handleCaption(start, end, id, caption, styling, animation, duration);
+        handleCaption(start, end, id, caption, styling);
     });
 
     video.addEventListener("timeupdate", () => {
@@ -133,8 +131,19 @@ const insertCaption = async () => {
         let id = "caption-11"
         let caption = "*LOUD CLAP*";  
         let styling = "loud-sound";
+
+        //video scale animation
+        let animation = "scale"
+        let duration = .1;
+        // let overlay = "triangle"
+        // let overlay = "slowikBorder"
+        // let overlay = "slowikMask"
+        // let duration = .2
+
         
         handleCaption(start, end, id, caption, styling);
+        addVideoAnimation(start, end, animation, duration);
+        addOverlayAnimation(start, end, overlay, duration);
     });
 
     video.addEventListener("timeupdate", () => {
@@ -626,12 +635,14 @@ const insertCaption = async () => {
     video.addEventListener("timeupdate", () => {
         // (Tyler: breathes in)
         let start = 110;
-        let end = 112;
+        let end = 111.3;
         let id = "caption-57"
-        let caption = "*TYLER BREATHES IN*";  
+        let caption = "*BREATHES IN*";  
         let styling = "soft-sound";
+        let animation = "breatheIn"
+        let duration = end - start;
         
-        handleCaption(start, end, id, caption, styling);
+        handleCaption(start, end, id, caption, styling, animation, duration);
     });
 
     video.addEventListener("timeupdate", () => {
@@ -898,3 +909,46 @@ const handleCaption = (start, end, id, caption, styling, animation, duration) =>
 };
 
 insertCaption();
+
+// video animation
+const addVideoAnimation = (start, end ,animation, duration) => {
+    if (video.currentTime > start && video.currentTime < end) {
+        video.classList.add(animation);
+        video.style.animationDuration = `${duration}s`;
+    } else {
+        video.classList.remove(animation);
+    }
+}
+
+// overlay animation
+const addOverlayAnimation = (start, end ,overlay, duration) => {
+    const overlayElement = document.querySelector(".overlay");
+    console.log("overlayElement", overlayElement);
+
+    if (video.currentTime > start && video.currentTime < end) {
+        overlayElement.classList.add(overlay);
+        overlayElement.style.animationDuration = `${duration}s`;
+    } else {
+        overlayElement.classList.remove(overlay);
+    }
+}
+
+
+// set audio visualizer video same time as video
+const audio = document.getElementById("audioVisualizer");
+
+video.addEventListener("timeupdate", () => {
+    audio.currentTime = video.currentTime;
+});
+
+// // play audio visualizer when video is playing and pause when paused
+video.addEventListener("play", () => {
+    audio.play();
+    console.log("audio playing");
+});
+
+video.addEventListener("pause", () => {
+    audio.pause();
+    console.log("audio paused");
+});
+
