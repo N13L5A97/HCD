@@ -27,7 +27,7 @@ For the first prototype I took a scene out of a movie called The Menu. This is o
 
 ### Feedback 01
 
-Marie liked the idea, bud had some useful feedback that I could use for the next prototype. Sometimes it was not really clear who was talking so I should add the names where this was not clear. Also the font style was not really representing the voice of the actor so I needed to add some more characteristics to that. It was still to "flat". I wasn't able to insert all the sounds into the captions and she told me she did really miss them. Some sounds where inserted but could use a better description. For example: there was a bell and the caption was "Bell dings". HEr response whas: "What kind of bell? Can you describe it to me". With this question I was able to empathize much better with what she needed. Also the rhythm of how people speak was a bit lacking. I knew I could really use this feedback and a lot of new ideas already came up.
+Marie liked the idea, bud had some useful feedback that I could use for the next prototype. Sometimes it was not really clear who was talking so I should add the names where this was not clear. Also the font style was not really representing the voice of the actor so I needed to add some more characteristics to that. It was still to "flat". I wasn't able to insert all the sounds into the captions and she told me she did really miss them. Some sounds where inserted but could use a better description. For example: there was a bell and the caption was "Bell dings". Her response was: "What kind of bell? Can you describe it to me". With this question I was able to empathize much better with what she needed. Also the rhythm of how people speak was a bit lacking. I knew I could really use this feedback and a lot of new ideas already came up.
 
 ## The Second Prototype
 
@@ -35,6 +35,26 @@ With the feedback of the first prototype I made a lot of progress. I cut the tra
 
 <img src="./assets/images/textStyle.png" alt="Scene of the Menu with closed caption in different styles" height="200">
 
-![alt text](assets/images/theMenuGif.gif)
+![giphy of sound caption animation where the text becomes smaller](assets/images/theMenuGif.gif)
 
 ### Feedback 02
+
+Marie was really enthusiastic about my second prototype. The way I tried to mimic the way Slowik talks in the scene was much better then the first prototype. I changed the text to be a bit more how he speaks instead of using strict grammar. This really improved the visualization. The only thing here was that the font's were a little to small.
+
+<img src="./assets/images/taste.png" alt="scene with sublitles where Slowik says: Tasste" height="200">
+
+She also really liked the animations I added to the sound captions but when the animations became to fast it was a bit overwhelming so I should minimize that a bit. Also some transitions in sound were not clear. For example the way a sound transformed into violins music. She asked me how this transition felt, if it was a fast transition or a really slow one. In this case I need another way to visualize this.
+
+## The Third Prototype
+
+### Feedback 03
+
+## Reflection
+
+- study situation
+- ignore conventions
+- prioritise identity
+- add nonsense
+
+- Waar in het process?
+- Hoe zien we dat terug?
