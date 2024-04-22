@@ -22,6 +22,13 @@
 	format: ("truetype");
 }
 
+@font-face{
+    font-family: "PlayfairDisplay";
+    src: url(../assets/fonts/PlayfairDisplay.ttf);
+    format: ("truetype");
+
+}
+
 :root {
 	/* Inconsolata */
 	--font-family: "RobotoFlex", monospace;
@@ -43,7 +50,7 @@ main {
 video {
 	width: 100%;
 	height: auto;
-	margin-bottom: 2rem;
+    position: relative;
 }
 
 #cc {
@@ -53,12 +60,13 @@ video {
 	flex-direction: column;
 	align-items: center;
 	position: relative;
+	margin-top: 2rem;
 }
 
 p {
 	font-family: var(--font-family);
 	font-variation-settings: "wght" var(--volume), "wdth" var(--pitch);
-	font-size: 1.5rem;
+	font-size: clamp(1.5rem, 2vw, 2rem);
 	margin: 0.1rem;
 }
 
@@ -71,8 +79,8 @@ p {
 	top: -6rem;
 	background-color: white;
 	padding: 0.2rem;
-    font-size: .8rem;
-    font-style: italic;
+	font-size: 0.8rem;
+	font-style: italic;
 }
 
 .loud-sound {
@@ -89,14 +97,13 @@ p {
 
 /* music */
 .music {
-	font-style: italic;
+	--volume: 500;
+    font-family: "PlayfairDisplay";
 }
 
 /* people */
 .slowik {
 	font-family: "BodoniModa";
-	font-size: 1.2rem;
-	--pitch: 200;
 	--volume: 500;
 	color: rgb(197, 52, 0);
 }
@@ -105,27 +112,25 @@ p {
 	font-family: var(--font-family);
 	--pitch: 400;
 	--volume: 400;
+	font-size: clamp(1.3rem, 2vw, 2rem);
 }
 
 .richard {
 	font-family: Inconsolata;
-	--pitch: 400;
 	--volume: 300;
-    color: rgb(107, 160, 172);
+	color: rgb(107, 160, 172);
 }
 
 .lillian {
 	font-family: "JosefinSlab";
 	--volume: 500;
 	color: rgb(6, 106, 63);
-	font-size: 1.3rem;
 }
 
 .lillian-soft {
 	font-family: "JosefinSlab";
 	--volume: 300;
 	color: rgb(6, 106, 63);
-	font-size: 1.1rem;
 }
 
 /* specific styling */
@@ -175,15 +180,103 @@ p {
 	animation: softToHard ease-out forwards;
 }
 
-.tweezerClick {
-	animation: tweezerClick ease-out infinite alternate;
+.breatheIn {
+	animation: breatheIn ease-out forwards;
 }
 
-@keyframes tweezerClick {
+@keyframes breatheIn {
 	0% {
-		font-variation-settings: "wght" 300;
+		font-size: 0.8rem;
 	}
-    10% {
-        font-variation-settings: "wght" 400;
-    }
+	100% {
+		font-size: 1rem;
+	}
+}
+
+.scale {
+	animation: scale;
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.video-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 82%;
+	opacity: 0;
+	z-index: 2;
+	background-repeat: no-repeat;
+    background-position: center center;
+	display: none;
+}
+
+.audio{
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 40%;
+    height: 15%;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    mix-blend-mode: lighten;
+}
+
+.triangle {
+    display: block;
+	animation: overlay;
+	background-image: url(../assets/images/triangles.svg);
+	background-size: 50%;
+}
+
+.slowikBorder {
+    display: block;
+	animation: overlay;
+	background-image: url(../assets/images/slowikBorder2.svg);
+	background-size: 65%;
+}
+
+
+.slowikMask{
+    display: block;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    animation: overlay;
+
+    background-color: white;
+    mask-image: url(../assets/images/slowikMask2.svg);
+    mask-size: 100%;
+}
+
+@keyframes overlay {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
