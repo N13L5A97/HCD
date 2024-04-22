@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./styles/styles.css" />
-        <title>HCD</title>
-    </head>
-    <body>
-        <main>
-            <h1>The Menu</h1>
-            <video
-                id="video"
-                src="./assets/vids/Menu Movie 2023 Best Scene.mp4"
-                controls
-            ></video>
-            <section id="cc"></section>
-        </main>
-        <script src="./script.js"></script>
-    </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/styles.css" />
+		<title>HCD</title>
+	</head>
+	<body>
+		<main>
+			<h1>The Menu</h1>
+			<div class="video-container">
+                <div class="overlay"></div>
+                <div class="audio">
+                    <video 
+                        src="./assets/vids/audioVisualizer.mp4"
+                        id="audioVisualizer"
+                    ></video>
+                </div>
+				<video
+					id="video"
+					src="./assets/vids/Menu Movie 2023 Best Scene.mp4"
+					controls
+				></video>
+			</div>
+			<section id="cc"></section>
+		</main>
+		<script src="./script.js"></script>
+	</body>
 </html>
