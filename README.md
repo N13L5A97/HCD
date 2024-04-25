@@ -35,8 +35,6 @@ With the feedback of the first prototype I made a lot of progress. I cut the tra
 
 <img src="./assets/images/textStyle.png" alt="Scene of the Menu with closed caption in different styles" height="200"><img src="./assets/images/theMenuGif.gif" alt="The Menu" height="200"></img>
 
-<!-- ![giphy of sound caption animation where the text becomes smaller](assets/images/theMenuGif.gif) -->
-
 ### Feedback 02
 
 Marie was really enthusiastic about my second prototype. The way I tried to mimic the way Slowik talks in the scene was much better then the first prototype. I changed the text to be a bit more how he speaks instead of using strict grammar. This really improved the visualization. The only thing here was that the font's were a little to small.
