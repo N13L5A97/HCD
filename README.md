@@ -107,3 +107,15 @@ This project was all about exclusive design, in this case for Marie. I took a mo
 ### Add Nonsense
 
 Adding nonsense could be dangerous, but in most cases the results are very interesting. I started playing with a specific part in the scene where Slowik claps his hand. This creates a really loud sound and is an iconic piece of the scene. I tried to think outside the box with creating background effects and scaling the video. I started noticing that some versions were to crazy but I showed them to Marie anyway. This resulted in understanding more about the feeling I wanted to bring across. In first instance I thought the flash and the scale would be 'to much' but ended up being the best choice for this piece of the scene.
+
+## Resources
+
+- [giphy maker](https://ezgif.com/)
+- [The Menu Scene](https://www.youtube.com/watch?v=nO84Ngf36lU)
+- [Audio Visualizer](https://musicvid.org/)
+- [Variable Fonts](https://v-fonts.com/)
+- [RobotoFlex Font](https://github.com/googlefonts/roboto-flex)
+- [Inscolate Font](https://fonts.google.com/specimen/Inconsolata)
+- [Bodoni Moda Font](https://fonts.google.com/specimen/Bodoni+Moda)
+- [Josefin Slab](https://fonts.google.com/specimen/Josefin+Slab)
+- [Playfair Display Font](https://fonts.google.com/specimen/Playfair+Display)
