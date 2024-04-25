@@ -33,9 +33,9 @@ Marie liked the idea, bud had some useful feedback that I could use for the next
 
 With the feedback of the first prototype I made a lot of progress. I cut the transcript in the rhythm of the actors. I gave every actor a styling that fitted them (in my opinion) and described the sounds and music in the background as specific as possible. In the end I even added small animations to the sounds to give some sort of impression on how the sound "moves".
 
-<img src="./assets/images/textStyle.png" alt="Scene of the Menu with closed caption in different styles" height="200">
+<img src="./assets/images/textStyle.png" alt="Scene of the Menu with closed caption in different styles" height="200"><img src="./assets/images/theMenuGif.gif" alt="The Menu" height="200"></img>
 
-![giphy of sound caption animation where the text becomes smaller](assets/images/theMenuGif.gif)
+<!-- ![giphy of sound caption animation where the text becomes smaller](assets/images/theMenuGif.gif) -->
 
 ### Feedback 02
 
@@ -47,14 +47,65 @@ She also really liked the animations I added to the sound captions but when the 
 
 ## The Third Prototype
 
+For the third prototype I tried to focus on some specific pieces of the video. The first one is the loud clap of Slowik. I tried making multiple versions of the visualization of the sound.
+
+I started with scaling the video a bit:
+
+![giphy of clap with scaling video](assets/images/ClapScale.gif)
+
+After that I tried to put a border around Slowik:
+
+![giphy of clap with border around Slowik](assets/images/ClapBorder.gif)
+
+I thought it was to simple and not really affected the video so I made a mask around Slowik and added a white background to make it more flashy:
+
+![giphy of clap with white background around Slowik](assets/images/ClapMask.gif)
+
+The last version I tried to make it a bit more "crazy" and added triangles around Slowik:
+
+![giphy of clap with white triangles around Slowik](assets/images/ClapTriangle.gif)
+
+The second thing I wanted to add was more visualization for the music. I searched online for a audio viusualizer and found one from [musicvid.org](https://musicvid.org/). Here I could edit the audio visualizer a bit to what I needed.
+
+<img src="./assets/images/musicvid.png" alt="toolbox for visualizing audio" height="250">
+
+I implemented some minor feedback that Marie gave me the last time like up scaling the subtitles. I also added a new font to the music closed captions and added  a small animation on the part where Tyler breathes in.
+
+![giphy of Tyler breathing in](assets/images/tyler-animation.gif)
+
 ### Feedback 03
+
+When presenting the final prototype to Marie she really enjoyed watching it. We both agreed that the version where the scale and the flashy effect came together was the best. She also liked the small animations I added and the font was perfect as it is now.
+
+![giphy of clap with white background and scaling effect around Slowik](assets/images/ClapScaleMask.gif)
+
+The second thing she gave me feedback on was the audio visualizer. She told me she didn't know if it was really helpful since it was a bit stuttering. We talked about how the placement and the shape of the visualizer could really improve the experience and agreed on maybe a more simple design of a 'flowy' line that only visualizes the music (in this case it visualized the music and the surrounding sounds because I couldn't split these sounds).
+
+## What's Next
+
+If I would continue working on this project I would probably add more small animations on sound captions and focus on a way to visualize the music. I could start looking a little bit like this:
+
+<img src="./assets/images/music-visual.png" alt="examle of music visualization" height
+="250">
+
+I also think the fonts could be more diverse. Now the fonts are different but you can not really identify the tone or loudness of the voices. I could add more diverse styling to the fonts, like thickness and scale, to make this more visible.
 
 ## Reflection
 
-- study situation
-- ignore conventions
-- prioritise identity
-- add nonsense
+I really enjoyed this project and learned a lot about exclusive design. I really needed to push myself of box and learn to not rely on my own assumptions. Marie was really nice to work with and gave me very useful feedback. For the project we had to follow a couple of interesting design patterns.
 
-- Waar in het process?
-- Hoe zien we dat terug?
+### Study Situation
+
+Every week I had a feedback session with Marie. The first session was to get to know her and her needs. The three other sessions was about showing my prototype and receive feedback. This session was not only for me but also for other students who had Marie as their client. I also learned a lot from the feedback they received. Like when to add a name before a caption and when not to.
+
+### Ignore Conventions
+
+Ignoring conventions can lead to really interesting results. For example you would think people would not want to see closed captions in the middle of the screen, animated text or flashy animations when watching a movie. By testing this and ignoring the conventions I actually found out that in some cases this can actually be something that someone needs!
+
+### Prioritize Identity
+
+This project was all about exclusive design, in this case for Marie. I took a movie scene from a movie that Marie liked and tried to make the experience of this specific scene a lot more fun to watch. She really wanted to know the way a character - called Slowik - talks. In the end she could really make something out of the captions and recognize his personality.
+
+### Add Nonsense
+
+Adding nonsense could be dangerous, but in most cases the results are very interesting. I started playing with a specific part in the scene where Slowik claps his hand. This creates a really loud sound and is an iconic piece of the scene. I tried to think outside the box with creating background effects and scaling the video. I started noticing that some versions were to crazy but I showed them to Marie anyway. This resulted in understanding more about the feeling I wanted to bring across. In first instance I thought the flash and the scale would be 'to much' but ended up being the best choice for this piece of the scene.

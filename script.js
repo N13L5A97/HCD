@@ -135,15 +135,15 @@ const insertCaption = async () => {
         //video scale animation
         let animation = "scale"
         let duration = .1;
-        // let overlay = "triangle"
+        let overlay = "triangle"
         // let overlay = "slowikBorder"
         // let overlay = "slowikMask"
-        // let duration = .2
+        let duration2 = .2
 
         
         handleCaption(start, end, id, caption, styling);
-        addVideoAnimation(start, end, animation, duration);
-        addOverlayAnimation(start, end, overlay, duration);
+        // addVideoAnimation(start, end, animation, duration);
+        addOverlayAnimation(start, end, overlay, duration2);
     });
 
     video.addEventListener("timeupdate", () => {
@@ -921,13 +921,13 @@ const addVideoAnimation = (start, end ,animation, duration) => {
 }
 
 // overlay animation
-const addOverlayAnimation = (start, end ,overlay, duration) => {
+const addOverlayAnimation = (start, end ,overlay, duration2) => {
     const overlayElement = document.querySelector(".overlay");
-    console.log("overlayElement", overlayElement);
 
     if (video.currentTime > start && video.currentTime < end) {
         overlayElement.classList.add(overlay);
-        overlayElement.style.animationDuration = `${duration}s`;
+        overlayElement.style.animationDuration = `${duration2}s`;
+        console.log("overlayElement", overlayElement);
     } else {
         overlayElement.classList.remove(overlay);
     }
