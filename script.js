@@ -135,14 +135,14 @@ const insertCaption = async () => {
         //video scale animation
         let animation = "scale"
         let duration = .1;
-        let overlay = "triangle"
+        // let overlay = "triangle"
         // let overlay = "slowikBorder"
-        // let overlay = "slowikMask"
+        let overlay = "slowikMask"
         let duration2 = .2
 
         
         handleCaption(start, end, id, caption, styling);
-        // addVideoAnimation(start, end, animation, duration);
+        addVideoAnimation(start, end, animation, duration);
         addOverlayAnimation(start, end, overlay, duration2);
     });
 
